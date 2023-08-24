@@ -1,3 +1,7 @@
+//! recupero gli elementi di interesse dal dom
+const container = document.getElementById('container');
+
+
 // Creare l’array di oggetti con le informazioni fornite.
 const team = [
     {   
@@ -50,4 +54,10 @@ const team = [
 
 for (const person of team) {
     console.log(person.fullName + ' ' + person.role + ' ' + person.img);
+    // Stampare le stesse informazioni su DOM sottoforma di stringhe
+    container.innerHTML += `
+    <span>${person.fullName}</span>
+    <span>${person.role}</span>
+    <span>${person.img}</span><br>`
 }
+
