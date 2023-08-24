@@ -1,3 +1,7 @@
+main{
+    height: 100vh;
+    background-color: #242442;
+}
 img{
-    width: 100px;
+    width: 100%;
 }

@@ -57,7 +57,7 @@ for (const person of team) {
     // Stampare le stesse informazioni su DOM sottoforma di stringhe
     //todo ci sará una parte commentata in commenti html, questo per preservare la milestone precedente
     // Trasformare la stringa foto in una immagine effettiva
-    container.innerHTML += `
+/*     container.innerHTML += `
     <span>${person.fullName}</span>
     <span>${person.role}</span>
     
@@ -65,5 +65,19 @@ for (const person of team) {
     <!-- <span>${person.img}</span><br> -->
 
     <img src="./img/${person.img}" alt="${person.name}"><br>`
+     */
+    container.innerHTML += `
+    <div class="card" style="width: 18rem;">
+
+        <img src="./img/${person.img}" class="card-img-top" alt="${person.name}">
+
+        <div class="card-body">
+
+            <h5 class="card-title">${person.fullName}</h5>
+            <p class="card-text">${person.role}</p>
+            
+        </div>
+    </div>
+    `
 }
 
