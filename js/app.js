@@ -1,5 +1,6 @@
 //! recupero gli elementi di interesse dal dom
 const container = document.getElementById('container');
+const row = document.getElementById('row');
 
 
 // Creare l’array di oggetti con le informazioni fornite.
@@ -66,17 +67,22 @@ for (const person of team) {
 
     <img src="./img/${person.img}" alt="${person.name}"><br>`
      */
-    container.innerHTML += `
-    <div class="card" style="width: 18rem;">
 
-        <img src="./img/${person.img}" class="card-img-top" alt="${person.name}">
+    row.innerHTML += `
+    <div class='col-12 col-md-4'>
+    
+        <div class="card m-4" style="">
 
-        <div class="card-body">
+            <img src="./img/${person.img}" class="card-img-top" alt="${person.name}">
 
-            <h5 class="card-title">${person.fullName}</h5>
-            <p class="card-text">${person.role}</p>
-            
+            <div class="card-body">
+
+                <h5 class="card-title">${person.fullName}</h5>
+                <p class="card-text">${person.role}</p>
+
+            </div>
         </div>
+
     </div>
     `
 }
