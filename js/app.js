@@ -55,9 +55,15 @@ const team = [
 for (const person of team) {
     console.log(person.fullName + ' ' + person.role + ' ' + person.img);
     // Stampare le stesse informazioni su DOM sottoforma di stringhe
+    //todo ci sará una parte commentata in commenti html, questo per preservare la milestone precedente
+    // Trasformare la stringa foto in una immagine effettiva
     container.innerHTML += `
     <span>${person.fullName}</span>
     <span>${person.role}</span>
-    <span>${person.img}</span><br>`
+    
+    
+    <!-- <span>${person.img}</span><br> -->
+
+    <img src="./img/${person.img}" alt="${person.name}"><br>`
 }
 
